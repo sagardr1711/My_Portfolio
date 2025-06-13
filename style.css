@@ -830,12 +830,6 @@
 }
 
 /* Overflow */
-body {
-  overflow-x: hidden;
-}
-.container {
-  max-width: 100%;
-}
 
 @media (max-width: 600px) {
   h1 { font-size: 1.5rem; }
