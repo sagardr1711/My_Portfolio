@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact me</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <header>
+    <div class="Img-CM">
+      <img src="Assets/abstract-blue-grunge-texture-background-free-vector.jpg" alt="Blue background" height="245px" width="33345px">
+    </div>
+    <a href="index.html" class="home-link">
+      <div class="Top left">
+</div>
+    <a href="index.html" class="home-link">
+  <div class="Top left">
+        <p>SagarVerse</p>
+      </div>
+    </a>
+
+    <div class="Top right">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='myskills.html'">My Skills</button>
+      <button onclick="location.href='aboutme.html'">About me</button>
+      <button onclick="location.href='contactme.html'">Contact Me</button>
+    </div>
+  </header>
+  <body>
+    <div class="heading-CM">
+    <h2>Contact Me</h2>
+    <div class="form-CM">
+    <form id="contact-form">
+      <label for="Name">Name</label>
+      <input type="text" id="name" name="Name" placeholder="Enter your name" />
+      <br />
+      <br />
+      <label for="Email">Email</label>
+      <input
+        type="text"
+        id="Email"
+        name="Email"
+        placeholder="Enter your email adress"
+      />
+      <br /><br />
+      <label for="Message">Message</label>
+      <input
+        type="textbox"
+        id="Message"
+        name="Message"
+        placeholder="Enter your Message"
+      />
+      </div>
+      </div>
+      <br /><br />
+      <div class="button-container">
+  <button class="Submit-CM">Send Message</button>
+</div>
+
+    </form>
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          fetch("https://sheetdb.io/api/v1/lc2eybvosq3qn", {
+            method: "POST",
+            body: new FormData(this),
+          }).then((response) => {
+            if (response.ok) {
+              alert("Message Sent!");
+              this.reset();
+            } else {
+              alert("Something went wrong.");
+            }
+          });
+        });
+    </script>
+    <br />
+    <br />
+  </body>
+  <br />
+ <footer class="footer">
+  <div class="footer-content">
+    <h4>SagarVerse</h4>
+
+    <p class="footer-desc">
+      Portfolio of Sagar D R — exploring creativity through code, design, and storytelling.
+    </p>
+
+    <div class="footer-query">
+      <label for="query">Any Questions?</label><br />
+      <input type="text" id="query" placeholder="Enter your queries here" />
+    </div>
+
+    <div class="footer-contact">
+      <p class="contact-item">
+        <strong>Email:</strong>
+        <a href="mailto:Sagargowda9000@gmail.com">Sagargowda9000@gmail.com</a>
+      </p>
+      <p class="contact-item">
+        <strong>Mobile:</strong>
+        <a href="tel:+918431770864">+91 8431770864</a>
+      </p>
+      <p class="contact-item">
+        <strong>Photo Gallery:</strong>
+        <a href="https://drive.google.com/drive/folders/YOUR_FOLDER_ID_HERE" target="_blank">
+          View All Photos on Drive
+        </a>
+      </p>
+    </div>
+
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top">↑ Back to Top</button>
+
+    <p class="footer-copy">&copy; 2025 SagarVerse, All rights reserved</p>
+  </div>
+</footer>
+
+</html>

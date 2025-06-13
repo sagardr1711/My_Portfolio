@@ -1,0 +1,830 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 600px; /* crop height */
+  overflow: hidden; /* hides the rest of the image */
+}
+
+.Container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* scales and crops the image nicely */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1222%;
+}
+
+/* heading, buttons etc. remain same */
+
+.Top.left {
+  position: absolute;
+  top: 10px;
+  left: 76px;
+  font-size: 18px;
+  color: aliceblue;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.Top.right {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  display: flex;
+  gap: 10px; /* space between buttons */
+}
+
+/* Optional: style buttons a bit */
+.Top.left button,
+.Top.right button {
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading {
+  position: absolute;
+  bottom: 476px; /* Adjust vertical position */
+  left: 54px; /* Adjust horizontal position */
+  color: white;
+  max-width: 900px;
+  padding: 45px 20px;
+  font-family: "Times New Roman", Times, serif;
+
+  /* Animation */
+  opacity: 0;
+  animation: slideFadeIn 1.2s ease-out 0.3s forwards;
+}
+
+.heading h1 {
+  margin: 0 0 8px 0;
+  font-size: 62px;
+}
+
+.heading p {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.Skills {
+  position: absolute;
+  bottom: 555px; /* Adjust vertical position */
+  left: 54px; /* Adjust horizontal position */
+  color: black;
+  max-width: 900px; /* optional max width */
+  padding: 15px 20px;
+}
+
+.Skills h1 {
+  margin: 0 0 8px 0;
+  font-size: 42px;
+  /* This is to adjust the my skills Section */
+  color: rgb(255, 255, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 10px;
+  max-width: 880px;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Milestone section */
+.Milestone {
+  font-family:irish grover;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0px;
+  font-size: 45px;
+  font-style: normal;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  scroll-padding: 0px; /* optional, only affects scroll anchoring */
+
+  animation: slideIn 1s ease-in forwards;
+}
+/* Main section: Aligns text and image side by side */
+.graduation-section {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Times New Roman', Times, serif;
+  align-items: center;
+  padding: 0%;
+  gap: 80px;
+}
+
+/* Left content (Text block) */
+.left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Heading styling */
+.GD h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #000;
+  text-align: left;
+  position: relative;
+  top: 40px;
+  left: 730px;
+  max-width: 465px;
+
+}
+
+/* Paragraph container */
+.Year {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Year p {
+  font-size: 20px;
+  line-height: 20px;
+  color: #555;
+  margin-bottom: 0%;
+  text-align: left;
+  position: relative;
+  top: 81px;
+  right:32px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Bold Year Titles */
+.Year p:nth-child(1),
+.Year p:nth-child(4),
+.Year p:nth-child(7) {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Right content (Image block) */
+.right-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Image Styling */
+.Graduation img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 33px;
+}
+
+/* View Certificate Button */
+.view-btn {
+  background-color: #461c5a;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  bottom: 45px;
+  left: 467px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.view-btn::before {
+  content: "";
+  position: relative;
+  top: 45px;
+  left: -100px;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.view-btn:hover::before {
+  left: 0;
+}
+
+.view-btn:hover {
+  background-color: #5e2675;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+/* Button interaction - view certificate */
+.Top.right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.Top.right button {
+  padding: 10px 18px;
+  border: none;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Top.right button:hover {
+  background-color: #6a5ee6; /* Green hover */
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.Top.right button:active {
+  transform: scale(0.98);
+}
+
+/* College Second Rank section */
+.rank-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  left: 594px;
+  bottom: 120px;
+}
+
+.text-container {
+  max-width: 500px;
+  font-family:'Times New Roman', Times, serif;
+  text-align: left;
+  position: relative;
+  right: 675px;
+  bottom: 110px;
+}
+
+.text-container h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+/* Collecting President Badge */
+.President-CAVT {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  bottom: 110px;
+}
+.President-CAVT img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px; /* 👈 Curves the corners */
+}
+
+.Content-President {
+  flex: 1;
+  text-align: left;
+  position: relative;
+  bottom: 10px;
+}
+
+.Content-President h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.Content-President p:first-of-type {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 34px;
+}
+
+.Content-President p:last-of-type {
+  color: #666;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.President-CAVT img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* Mono Act Section */
+
+/* Section Container */
+.solo-spotlight {
+  padding: 60px 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Heading */
+.solo-spotlight h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Flex container for two parts */
+.mono-acts {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Each individual block */
+.mono-block {
+  flex: 1;
+  max-width: 48%;
+  text-align: center;
+}
+
+/* Image styling with curved corners */
+.mono-block img {
+  width: 100%;
+  height: 467px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+/* Title under image */
+.mono-block p:first-of-type {
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Description paragraph */
+.mono-block p:last-of-type {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+/* Footer Section */
+.footer {
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  border-top: 1px solid #333;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer h4 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #f9f9f9;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.footer-query label {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.footer-query input {
+  padding: 8px 12px;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.footer-query input:focus {
+  border: 2px solid #00ffd1;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.footer-contact {
+  margin-top: 20px;
+}
+
+.contact-item {
+  font-size: 0.85rem;
+  margin: 6px 0;
+}
+
+.footer-contact a {
+  color: #00ffd1;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 0.85rem;
+}
+
+.footer-contact a:hover {
+  color: #e37a39;
+  text-decoration: underline;
+}
+
+.back-to-top {
+  margin-top: 15px;
+  background-color: transparent;
+  border: 1px solid #f7fffe;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #fdfdfd;
+  color: #111;
+}
+.footer-copy {
+  margin-top: 25px;
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+/* Second Page */
+.Container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* crop height */
+  overflow: hidden; /* hides the rest of the image */
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* scales and crops the image nicely */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* Headig and description */
+.Skills {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 27px;
+  line-height: 1.2;
+  position: absolute;
+  max-width: 899px;
+  padding: 21px;
+  border-radius: 8px;
+
+  /* Animate on page load */
+  animation: slideIn 0.9s ease-out backwards;
+}
+/* Digital Marketing Section */
+.Heading-DM {
+  font-size: larger;
+  position: relative;
+  left: 29px;
+  bottom: 29px;
+  max-width: fit-content;
+  margin-bottom: 20px;
+  font-weight:bolder;
+}
+.Info-DM {
+  font-size: 23px;
+  position: relative;
+  text-align: justify;
+  max-width: 1340px;
+  margin-top: 20px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 30px;
+  font-weight: lighter;
+}
+
+.DM-Img {
+  position: relative;
+  margin: 0 auto;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 8px;
+  max-width: fit-content;
+}
+
+/* Documentary Section */
+.Heading-SF {
+  font-size: larger;
+  font-weight: bold;
+  position: relative;
+  left: 29px;
+  top: 19px;
+}
+
+.Info-SF{
+  position: relative;
+  font-size: 23px;
+  text-align: justify;
+  max-width: 1340px;
+  line-height: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+}
+
+/* About me Section */
+.Heading-AM{
+  font-size: x-large;
+  font-weight: bolder;
+  position: relative;
+  left: 34px;
+  top:43px;
+}
+.Subhead-AM{
+  font-size: 23px;
+  color: #1e1e1e;
+  padding-bottom: 0%;
+}
+.Content-AM{
+  font-weight: lighter;
+  max-width: 600px;
+  line-height: 29px;
+  text-align: justify;
+  font-size: large;
+  padding-bottom: 0%;
+}
+.Img-Am {
+  display: block;
+  max-width:fit-content;
+  height: auto;
+  border-radius: 0px;
+  border: 3px solid #000000; /* Matches the form button color */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin: 40px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  bottom: 753px;
+  left: 724px;
+  padding-bottom: 0%;
+}
+
+.Img-Am:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  padding-bottom: 0%;
+}
+
+/* Contact me Section */
+.heading-CM {
+  text-align: center;
+  position: relative;
+  top: 0%;
+  padding: 20px 0;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c2c2c;
+  letter-spacing: 0.5px;
+}
+
+.form-CM {
+  width: 36%;
+  margin: 0 auto;
+  padding:77px;
+  background: #ffebeb;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family:'Times New Roman', Times, serif;
+  transition: 0.5s ease-in-out;
+  margin-bottom: 100px;
+}
+
+.form-CM:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-CM input,
+.form-CM textarea {
+  width: 100%;
+  padding: 13px 12px;
+  margin-bottom: 16px;
+  border: 2.2px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fefefe;
+  color: #333;
+  position: relative;
+  top: 5px;
+}
+
+.form-CM input:focus,
+.form-CM textarea:focus {
+  border-color: #9b5de5;
+  box-shadow: 0 0 6px rgba(155, 93, 229, 0.3);
+  outline: none;
+  background-color: #f9f4ff;
+}
+
+.form-CM textarea {
+  resize: vertical;
+  min-height: 1100px;
+}
+
+.form-CM button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #9b5de5, #6a4c93);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-CM button:hover {
+  background: linear-gradient(135deg, #6a4c93, #9b5de5);
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-CM {
+    width: 90%;
+    padding: 24px;
+  }
+
+  .heading-CM {
+    font-size: 24px;
+    top: 120px;
+  }
+}
+
+
+
+.Submit-CM {
+  color: #ffffff;
+  font-size: 18px;
+  padding: 14px 32px;
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px #00ffff88;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  top: 0px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Pulse animation */
+.Submit-CM::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #3d005144 0%, transparent 80%);
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+/* Sparkle slide effect */
+.Submit-CM::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #450065aa, transparent);
+  transform: skewX(-30deg);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.Submit-CM:hover {
+  color: #000000;
+  background: #2d0037;
+  box-shadow: 0 0 25px #3e004f, 0 0 45px #4d0062;
+  transform: scale(1.08);
+}
+
+.Submit-CM:hover::after {
+  left: 120%;
+}
+
+/* Keyframes for glowing pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+}
+/* Center the button in the page */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 124px;
+}
+
+/* Interactive glowing "Send Message" button */
+.Submit-CM {
+  color: #090058;
+  font-size: 10px;
+  padding: 11px 36px;
+  border: 2px solid #15004e;
+  border-radius: 14px;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 12px #28013666;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow and lift effect on hover */
+.Submit-CM:hover {
+  color: #000;
+  background-color: #060053b2;
+  box-shadow: 0 0 18px #110045ad, 0 0 30px #40005faa;
+  transform: scale(1.08);
+}
