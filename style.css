@@ -1,7 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  height: 600px; /* crop height */
+  height: 400px; /* crop height */
   overflow: hidden; /* hides the rest of the image */
 }
 
